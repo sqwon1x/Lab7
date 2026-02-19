@@ -9,7 +9,7 @@ class Program
         List<Vehicle> vehicles = new List<Vehicle>
         {
             new Car("BMW", 120),
-            new Bicycle("Trek", 25),
+            new Bicycle("BMX", 25),
             new Airplane("Boeing", 800)
         };
 
@@ -46,4 +46,20 @@ abstract class Vehicle
     }
 
     public abstract void Move();
+}
+
+// Клас Car
+class Car : Vehicle, IRefuelable
+{
+    public Car(string brand, int speed) : base(brand, speed) { }
+
+    public override void Move()
+    {
+        Console.WriteLine($"Car {brand} drives on the road at {speed} km/h.");
+    }
+
+    public void Refill()
+    {
+        Console.WriteLine($"Car {brand} is refueling with gasoline.");
+    }
 }
