@@ -32,3 +32,18 @@ interface IRefuelable
 {
     void Refill();
 }
+
+// Базовий клас
+abstract class Vehicle
+{
+    protected string brand;
+    protected int speed;
+
+    public Vehicle(string brand, int speed)
+    {
+        this.brand = brand;
+        this.speed = speed;
+    }
+
+    public abstract void Move();
+}
