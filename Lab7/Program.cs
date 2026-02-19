@@ -26,3 +26,9 @@ class Program
         }
     }
 }
+
+// Інтерфейс
+interface IRefuelable
+{
+    void Refill();
+}
