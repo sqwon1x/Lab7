@@ -74,3 +74,19 @@ class Bicycle : Vehicle
         Console.WriteLine($"Bicycle {brand} pedals at {speed} km/h.");
     }
 }
+
+// Клас Airplane
+class Airplane : Vehicle, IRefuelable
+{
+    public Airplane(string brand, int speed) : base(brand, speed) { }
+
+    public override void Move()
+    {
+        Console.WriteLine($"Airplane {brand} flies at {speed} km/h.");
+    }
+
+    public void Refill()
+    {
+        Console.WriteLine($"Airplane {brand} is refueling with aviation fuel.");
+    }
+}
