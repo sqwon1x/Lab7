@@ -63,3 +63,14 @@ class Car : Vehicle, IRefuelable
         Console.WriteLine($"Car {brand} is refueling with gasoline.");
     }
 }
+
+// Клас Bicycle
+class Bicycle : Vehicle
+{
+    public Bicycle(string brand, int speed) : base(brand, speed) { }
+
+    public override void Move()
+    {
+        Console.WriteLine($"Bicycle {brand} pedals at {speed} km/h.");
+    }
+}
